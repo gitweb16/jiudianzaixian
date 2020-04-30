@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import publi from './publi.js'
+
 Vue.use(VueRouter)
 
 

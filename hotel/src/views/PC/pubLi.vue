@@ -106,7 +106,7 @@
 							<div>
 								<div class="mg">
 									<i class="el-icon-picture"></i>
-									<router-link tag="span" to="">房号管理</router-link>
+									<router-link tag="span" to="/publi/fanghao">房号管理</router-link>
 								</div>
 							</div>
 						</li>
@@ -169,7 +169,8 @@
 							</span>
 						</div>
 						<div class="content">
-							<p>欢迎使用华景酒店后台管理系统</p>
+							<!-- <p>欢迎使用华景酒店后台管理系统</p> -->
+							<router-view></router-view>
 						</div>
 					</div>
 					<div class="xiad">
@@ -203,7 +204,7 @@
 	.content {
 		margin: 1rem 0.5rem;
 		background: #fff;
-		height: 90%;
+		height: 704px;
 		width: 100%;
 	}
 
@@ -291,4 +292,5 @@
 	.xiaodatou>span:last-of-type {
 		float: right
 	}
+	
 </style>
