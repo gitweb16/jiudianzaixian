@@ -94,7 +94,7 @@
 							<div>
 								<div class="mg">
 									<i class="el-icon-picture"></i>
-									<router-link tag="span" to="">房态管理</router-link>
+									<router-link tag="span" to="/publi/fangtai">房态管理</router-link>
 								</div>
 							</div>
 							<div>
