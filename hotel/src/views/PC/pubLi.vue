@@ -47,7 +47,7 @@
 							<div>
 								<div class="mg">
 									<i class="el-icon-picture"></i>
-									<router-link tag="span" to="">优惠卷管理</router-link>
+									<router-link tag="span" to="/publi/youhui">优惠卷管理</router-link>
 								</div>
 							</div>
 						</li>
@@ -56,7 +56,7 @@
 							<div>
 								<div class="mg">
 									<i class="el-icon-picture"></i>
-									<router-link tag="span" to="">
+									<router-link tag="span" to="/publi/shangplist">
 
 										商品列表</router-link>
 								</div>
@@ -64,7 +64,7 @@
 							<div>
 								<div class="mg">
 									<i class="el-icon-picture"></i>
-									<router-link tag="span" to="">商品分类</router-link>
+									<router-link tag="span" to="/publi/shangpType">商品分类</router-link>
 								</div>
 							</div>
 						</li>
