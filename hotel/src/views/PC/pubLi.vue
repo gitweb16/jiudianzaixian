@@ -16,11 +16,11 @@
 				<div>
 					<div class="daohang">
 						<li>
-							<span>会员管理</span>
+							<span >会员管理</span>
 							<div>
 								<div class="mg">
 									<i class="el-icon-picture"></i>
-									<router-link tag="span" to="" class="items active ">会员列表</router-link>
+									<router-link tag="span" to="publi/huiList/" >会员列表</router-link>
 								</div>
 							</div>
 							<div>
@@ -38,7 +38,7 @@
 							<div>
 								<div class="mg">
 									<i class="el-icon-picture"></i>
-									<router-link tag="span" to="">充值记录</router-link>
+									<router-link tag="span" to="/chonZhiJiLu">充值记录</router-link>
 								</div>
 							</div>
 						</li>
@@ -47,7 +47,7 @@
 							<div>
 								<div class="mg">
 									<i class="el-icon-picture"></i>
-									<router-link tag="span" to="">优惠卷管理</router-link>
+									<router-link tag="span" to="/publi/youhui">优惠卷管理</router-link>
 								</div>
 							</div>
 						</li>
@@ -56,14 +56,15 @@
 							<div>
 								<div class="mg">
 									<i class="el-icon-picture"></i>
-										<router-link tag="span" to="/publi/shangplist">商品列表</router-link>
+									<router-link tag="span" to="/publi/shangplist">
+
+										商品列表</router-link>
 								</div>
 							</div>
 							<div>
 								<div class="mg">
-									<i class="el-icon-picture"></i>									
+									<i class="el-icon-picture"></i>
 									<router-link tag="span" to="/publi/shangpType">商品分类</router-link>
-
 								</div>
 							</div>
 						</li>
@@ -72,19 +73,19 @@
 							<div>
 								<div class="mg">
 									<i class="el-icon-picture"></i>
-									<router-link tag="span" to="">商品订单</router-link>
+									<router-link tag="span" to="/publi/shangpingdingdan">商品订单</router-link>
 								</div>
 							</div>
 							<div>
 								<div class="mg">
 									<i class="el-icon-picture"></i>
-									<router-link tag="span" to="">客房订单</router-link>
+									<router-link tag="span" to="/publi/kefangdingdan">客房订单</router-link>
 								</div>
 							</div>
 							<div>
 								<div class="mg">
 									<i class="el-icon-picture"></i>
-									<router-link tag="span" to="">住宿记录</router-link>
+									<router-link tag="span" to="/publi/zhusujilu">住宿记录</router-link>
 								</div>
 							</div>
 						</li>
@@ -93,7 +94,7 @@
 							<div>
 								<div class="mg">
 									<i class="el-icon-picture"></i>
-									<router-link tag="span" to="">房态管理</router-link>
+									<router-link tag="span" to="/publi/fangtai">房态管理</router-link>
 								</div>
 							</div>
 							<div>
@@ -124,13 +125,13 @@
 							<div>
 								<div class="mg">
 									<i class="el-icon-picture"></i>
-									<router-link tag="span" to="">管理员列表</router-link>
+									<router-link tag="span" to="/publi/userguanli">管理员列表</router-link>
 								</div>
 							</div>
 							<div>
 								<div class="mg">
 									<i class="el-icon-picture"></i>
-									<router-link tag="span" to="">角色管理</router-link>
+									<router-link tag="span" to="/publi/character">角色管理</router-link>
 								</div>
 							</div>
 						</li>
@@ -159,16 +160,9 @@
 				</div>
 				<div>
 					<div class="node">
-						<div class="xiaodatou">
-							<span>
-								<router-link tag="a" to="/publi/welcome">首页</router-link>
-								</span>							
-							<span>
-								<router-link tag="a" to="">返回</router-link>
-							</span>
-						</div>
+						
 						<div class="content">
-							
+							<!-- <p>欢迎使用华景酒店后台管理系统</p> -->
 							<router-view></router-view>
 						</div>
 					</div>
@@ -180,19 +174,43 @@
 		</div>
 	</div>
 </template>
-
+<script src=""></script>
 <script>
 	//import Hello from './components/HelloWorld.vue'
 	//import Header from './components/publi/pub.vue'
 	export default ({
-		name: 'publi'
+		name: 'publi',
+		data(){
+			return{				
+					title:'首页'							
+			}
+		},
+		methods:{
+			getTitle(value){
+				console.log(value)
+			}
+		}
 	})
 </script>
 <style lang="scss">
 	* {
 		font-size: 0.9375rem;
 	}
-
+.shouye {
+		background: #F2F2F2;
+		margin: 0px 0px 0.375rem;
+		padding: 10px 0px;
+	}
+	
+	.shouye span:first-of-type {
+	
+		margin-left: 73px;
+	}
+	
+	.shouye span:last-of-type {
+		float: right;
+		margin-right: 30px;
+	}
 	.xiad {
 		padding: 69px 31px 0px 0px;
 		background: #FFF;

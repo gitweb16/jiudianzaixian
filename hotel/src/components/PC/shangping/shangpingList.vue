@@ -242,26 +242,20 @@
 	.main {
 		width: 100%;
 	}
-
 	.head span {
 		padding-left: 50px;
 		color: gainsboro;
-
 	}
-
 	.head a:nth-of-type(1) {
 		color: gainsboro;
 	}
-
 	a {
 		text-decoration: none;
 		color: #000000;
 	}
-
 	td {
 		border: 1px solid #efefef;
 	}
-
 	.center {
 		width: 96.8%;
 		height: 600px;
@@ -270,82 +264,67 @@
 		padding-top: 10px;
 		border-radius: 10px;
 	}
-
 	.left {
 		padding: 13px 14px;
     /* margin: 20px; */
     position: relative;
 	}
-
 	.left input {
 		height: 30px;
 		width: 200px;
 		display: inline-block;
 	}
-
 	.left button {
 		position: absolute;
 		left: 230px;
 		top: -36px;
 		height: 35px;
 	}
-
 	.right {
 		float: right;
 		margin-top: -50px;
 		margin-right: 9px;
 	}
-
 	.right button {
 		height: 35px;
 	}
-
 	.center-con {
 		width: 96%;
 		height: 420px;
 		/* border: 1px solid black; */
 		margin-left: 20px;
 	}
-
 	.center-con table {
 		margin: 10px;
 	}
-
 	.has-gutter tr {
 		background-color: gray;
 	}
-
 	.chek {
 		width: 310px;
 		height: 30px;
 	}
-
 	.inp {
 		width: 306px;
 		height: 23px;
 	}
-
 	.hao {
 		display: inline-block;
 		margin-top: 20px;
 		margin-left: 28px;
 	}
-
 	.bei {
 		display: inline-block;
 		margin-top: 20px;
 		margin-left: 38px;
 	}
-
 	.el-message-box__btns {
 		text-align: center;
 	}
-
 	.footer {
 		margin-top: 40px;
 		margin-left: 140px;
 	}
-
 	.center-head {
 		background: #efefef;
 		margin-left: 31px;

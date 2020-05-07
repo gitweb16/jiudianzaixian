@@ -13,7 +13,7 @@ export default new VueRouter({
 		publi,
 		{
 			path: '/*',
-			redirect:'/publi/welcome'
+			redirect:'/publi'
 		}
 
 	]
