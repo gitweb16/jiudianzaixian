@@ -39,7 +39,7 @@ export default {
 			path: 'zhusujilu',
 			component: () => import('../components/PC/dindan/zhuShuJiLu.vue')
 		},
-		{ 
+		{
 			path: 'welcome',
 			component: () => import('../components/PC/welcome/welcome.vue')
 		},
@@ -50,10 +50,16 @@ export default {
 		{
 			path: 'shangpType',
 			component: () => import('../components/PC/shangping/shangpingType.vue')
-		},		
+		},
 		{
 			path: 'shangpingbianji',
 			component: () => import('../components/PC/shangping/shangpingbianji.vue')
+		}, {
+			path: 'fangxin',
+			component: () => import('../components/PC/kefang/fangXin.vue')
+		}, {
+			path: 'addfangxin',
+			component: () => import('../components/PC/kefang/addfangXin.vue')
 		},
 		{
 			path: '/*',

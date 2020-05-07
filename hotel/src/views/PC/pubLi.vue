@@ -98,7 +98,7 @@
 							<div>
 								<div class="mg">
 									<i class="el-icon-picture"></i>
-									<router-link tag="span" to="">房型管理</router-link>
+									<router-link tag="span" to="/publi/fangxin">房型管理</router-link>
 								</div>
 							</div>
 							<div>
@@ -205,12 +205,12 @@
 	.xiad {
 		padding: 69px 31px 0px 0px;
 		background: #FFF;
-		width: 100%;
+		width: 99%;
 		margin-left: -10px;
 	}
 
 	.content {
-		margin: 1rem 0.5rem;
+		margin:-4px 0px 0px 3px;
 		background: #fff;
 		height: 1123px;
 		width: 100%;

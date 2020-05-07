@@ -19,7 +19,7 @@
 		background: #fff;
 	
 		padding: 6px;
-		width: 100%
+		width: 99%
 	}
 
 </style>

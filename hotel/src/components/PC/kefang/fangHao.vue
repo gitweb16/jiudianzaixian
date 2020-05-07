@@ -1,13 +1,5 @@
 <template>
 	<div class="main">
-		<div class="xiaodatou">
-			<span>
-				客房管理><router-link tag="a" to="/publi/fanghao">房号管理</router-link>
-			</span>
-			<span>
-				<router-link tag="a" to="">返回</router-link>
-			</span>
-		</div>
 		<div class="center">
 			<div class="center-head">
 				<div class="left">
@@ -26,7 +18,7 @@
 				</div>
 			</div>
 			<div class="center-con">
-				<el-table ref="multipleTable" :data="tableData" tooltip-effect="dark" style="width: 100%" @selection-change="handleSelectionChange"	 :header-cell-style="{background:'#fafafa',color:'#606266'}">
+				<el-table ref="multipleTable" :data="tableData" tooltip-effect="dark" style="width: 100%" @selection-change="handleSelectionChange" :header-cell-style="{background:'#fafafa',color:'#606266'}">
 					<el-table-column type="selection" width="55">
 					</el-table-column>
 					<el-table-column prop="name" label="房型名称" width="180">
@@ -37,21 +29,22 @@
 					</el-table-column>
 					<el-table-column prop="jia" label="上架/下架">
 						<template slot-scope="scope">
-							<el-switch v-model="scope.row.status" :active-value="1" :inactive-value="2" active-color="#13ce66"					 inactive-color="#e2e2e2" @change="changeSwitch(scope.row)" /></template>
+							<el-switch v-model="scope.row.status" :active-value="1" :inactive-value="2" active-color="#13ce66"
+							inactive-color="#e2e2e2" @change="changeSwitch(scope.row)" /></template>
 					</el-table-column>
 					<el-table-column prop="caozuo" label="操作">
 						<template slot-scope="scope">
 							<el-button type="text" @click="dialogFormVisible = true">编辑</el-button>
-
 							&nbsp;&nbsp;<el-button type="text" @click="del(scope.$index,tableData)">删除</el-button>
 						</template>
 					</el-table-column>
 				</el-table>
 			</div>
+
 			<el-dialog title="编辑房号" :visible.sync="dialogFormVisible" :append-to-body='true'>
 				<el-form :model="form">
 					<el-form-item label="选择房型" :label-width="formLabelWidth"><span style="color:red">*</span> :
-						<el-select v-model="form.region" placeholder="请选择房型">
+						<el-select v-model="form.region" placeholder="请选择房型" size="small">
 							<el-option label="途选大床房" value="shanghai"></el-option>
 							<el-option label="途享大床房" value="beijing"></el-option>
 							<el-option label="途奢大床房" value="ert"></el-option>
@@ -60,21 +53,21 @@
 						</el-select>
 					</el-form-item>
 					<el-form-item label="房号" :label-width="formLabelWidth"><span style="color:red">*</span> :
-						<el-input v-model="form.name" autocomplete="off" placeholder="请输入房号                                                                           0/9"></el-input>
-					</el-form-item>
-					<el-form-item label="备注" :label-width="formLabelWidth" class="iput"> :
+						<el-input type="text" placeholder="请输入房号" v-model="text" maxlength="10" show-word-limit size="small"></el-input>
+						</el-form-item>
+					<el-form-item label="备注" :label-width="formLabelWidth" size="small" class="iput"> :
 						<el-input v-model="form.name" autocomplete="off" placeholder='                                                                                             0/15'></el-input>
 					</el-form-item>
 				</el-form>
 				<div slot="footer" class="dialog-footer">
-					<el-button @click="dialogFormVisible = false">取 消</el-button>
-					<el-button type="primary" @click="dialogFormVisible = false">保 存</el-button>
+					<el-button @click="dialogFormVisible = false" size="small">取 消</el-button>
+					<el-button type="primary" @click="dialogFormVisible = false" size="small">保 存</el-button>
 				</div>
 			</el-dialog>
 			<el-dialog title="新增房号" :visible.sync="dialogFormVisible2" :append-to-body='true'>
 				<el-form :model="form">
 					<el-form-item label="选择房型" :label-width="formLabelWidth"><span style="color:red">*</span> :
-						<el-select v-model="form.region" placeholder="请选择房型">
+						<el-select v-model="form.region" placeholder="请选择房型" size="small">
 							<el-option label="途选大床房" value="shanghai"></el-option>
 							<el-option label="途享大床房" value="beijing"></el-option>
 							<el-option label="途奢大床房" value="ert"></el-option>
@@ -83,19 +76,20 @@
 						</el-select>
 					</el-form-item>
 					<el-form-item label="房号" :label-width="formLabelWidth"><span style="color:red">*</span> :
-						<el-input v-model="form.name" autocomplete="off" placeholder="请输入房号                                                                           0/9"></el-input>
+						<el-input type="text" placeholder="请输入房号" v-model="text" maxlength="10" show-word-limit size="small"></el-input>
 					</el-form-item>
-					<el-form-item label="备注" :label-width="formLabelWidth" class="iput"> :
+					<el-form-item label="备注" :label-width="formLabelWidth" class="iput" size="small"> :
 						<el-input v-model="form.name" autocomplete="off" placeholder='                                                                                             0/15'></el-input>
 					</el-form-item>
 				</el-form>
 				<div slot="footer" class="dialog-footer">
-					<el-button @click="dialogFormVisible2 = false">取 消</el-button>
-					<el-button type="primary" @click="dialogFormVisible2 = false">保 存</el-button>
+					<el-button @click="dialogFormVisible2 = false" size="small">取 消</el-button>
+					<el-button type="primary" @click="dialogFormVisible2 = false" size="small">保 存</el-button>
 				</div>
 			</el-dialog>
 			<div class="footer">
-				<el-pagination background @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page="currentPage4"		 :page-sizes="[100, 200, 300, 400]" :page-size="100" layout="total,prev, pager, next,sizes, jumper" :total="400">
+				<el-pagination background @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page="currentPage4"
+				:page-sizes="[100, 200, 300, 400]" :page-size="100" layout="total,prev, pager, next,sizes, jumper" :total="400">
 				</el-pagination>
 			</div>
 
@@ -103,7 +97,7 @@
 	</div>
 </template>
 
-<script >
+<script>
 	export default {
 		name: "fangHao",
 		data() {
@@ -248,18 +242,7 @@
 	}
 </script>
 
-<style scoped>
-	.xiaodatou {
-		background: #fff;
-		margin: -4px 0px 0px 0px;
-		padding: 6px;
-		width: 100%
-	}
-
-	.xiaodatou>span:last-of-type {
-		float: right
-	}
-
+<style>
 	.el-table td,
 	.el-table th {
 		text-align: center;
@@ -272,6 +255,7 @@
 	.head span {
 		padding-left: 50px;
 		color: gainsboro;
+
 	}
 
 	.head a:nth-of-type(1) {
@@ -368,7 +352,7 @@
 	}
 
 	.el-dialog {
-		width: 50%;
+		width: 40%;
 	}
 
 	.iput {
