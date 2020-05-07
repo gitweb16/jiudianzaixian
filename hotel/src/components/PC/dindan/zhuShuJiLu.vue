@@ -1,6 +1,13 @@
 <template>
 	<div class="border">
-
+		<div class="xiaodatou">
+			<span>
+				订单管理><router-link tag="span" to="/publi/character">住宿记录</router-link>
+			</span>
+			<span>
+				<router-link tag="a" to="">返回</router-link>
+			</span>
+		</div>
 		<div class="block">
 			入离时间:
 			<el-date-picker size="small" v-model="value2" type="datetimerange" :picker-options="pickerOptions" range-separator="至" start-placeholder="开始日期" end-placeholder="结束日期" align="left" class="wid">
@@ -144,7 +151,17 @@
 	};
 </script>
 
-<style>
+<style scoped>
+	.xiaodatou {
+		background: #fff;
+		margin: -4px 0px 0px 0px;
+		padding: 6px;
+		width: 100%
+	}
+	
+	.xiaodatou>span:last-of-type {
+		float: right
+	}
 	.border {
 		margin-left: 30px;
 		margin-top: 30px;

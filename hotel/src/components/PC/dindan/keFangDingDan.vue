@@ -1,5 +1,14 @@
 <template>
 	<div class="div">
+		
+		<div class="xiaodatou">
+			<span>
+				订单管理><router-link tag="span" to="/publi/character">客房订单</router-link>
+			</span>
+			<span>
+				<router-link tag="a" to="">返回</router-link>
+			</span>
+		</div>
 		<div class="dd">
 			<el-row>
 				<el-button class="lu1" size="small">全部订单(1000)</el-button>
@@ -213,13 +222,24 @@
 						}
 					}]
 				},
-				value1: [new Date(2000, 10, 10, 10, 10), new Date(2000, 10, 11, 10, 10)],
-				value2: ''
+				value: [new Date(2000, 10, 10, 10, 10), new Date(2000, 10, 11, 10, 10)],
+				value2: '',
+				input:''
 			};
 		}
 	};
 </script>
-<style>
+<style scoped>
+	.xiaodatou {
+		background: #fff;
+		margin: -4px 0px 0px 0px;
+		padding: 6px;
+		width: 100%
+	}
+	
+	.xiaodatou>span:last-of-type {
+		float: right
+	}
 	.el-table td,
 	.el-table th {
 		text-align: center;
@@ -285,6 +305,6 @@
 
 	.div {
 		height: 400px;
-		width: 1140px;
+		width: 1123px;
 	}
 </style>

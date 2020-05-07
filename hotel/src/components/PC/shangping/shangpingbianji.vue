@@ -1,6 +1,17 @@
 <template>
 	<div class="ganan">
+		<div class="xiaodatou">
+			<span>
+				商品管理>
+				<router-link tag="span" to="/publi/shangplist">商品列表></router-link>
+				<router-link tag="span" to="/publi/shangpingbianji">商品编辑</router-link>
+			</span>
+			<span>
+				<router-link tag="a" to="">返回</router-link>
+			</span>
+		</div>
 		<div class="pai1">
+			<div><img src="../../../../public/img/jiantou.png" alt=""></div>
 			<div><img src="../../../../public/img/jiantou.png" alt=""></div>
 			<div><img src="../../../../public/img/jiantou.png" alt=""></div>
 			<div><img src="../../../../public/img/jiantou.png" alt=""></div>
@@ -38,6 +49,16 @@
 					<el-button type="primary">上传图片</el-button>
 				</div>
 			</div>
+			<div class="santu">
+				<img src="../../../../public/img/bianji.jpg" alt="">
+			</div>
+			<div class="shangp">
+				<span>
+					商品上架
+					<el-switch v-model="value1" active-color="#13ce66" inactive-color="#ff4949">
+					</el-switch>
+				</span>
+			</div>
 		</div>
 	</div>
 </template>
@@ -49,8 +70,10 @@
 			return {
 				formInline: {
 					user: '',
-					region: ''
-				}
+					region: '',
+
+				},
+				value1: true
 			}
 		},
 		methods: {
@@ -62,32 +85,56 @@
 </script>
 
 <style scoped>
+	.shangp {
+         padding: 27px 51px;
+	}
+
 	.ganan {
 		border: 1px solid #efefef
 	}
+
+	.santu {
+		margin: 0px 0px 0px 39px;
+	}
+
 	.el-form-item {
 		margin-bottom: 6px;
 		margin-top: 2px 2px;
 	}
+
 	.ganan>div {
 		display: inline-block;
 	}
+
 	.pai1 {
 		background: #FCFCFC;
 		width: 180px;
 		border: 1px solid #efefef;
 		margin-left: 11px;
 	}
+
 	.pai1>div {
 		margin: 100px 0px;
 	}
+
 	.pai1>div:nth-of-type(2) {
-		margin: 170px 0px;
+		margin: 131px 0px;
 	}
+
+	.pai1>div:nth-of-type(3) {
+		margin: 195px 0px;
+	}
+
+	.pai1>div:nth-of-type(4) {
+		margin: 426px 0px 105px;
+	}
+
 	.pai2 {
 		width: 559px;
+
 		vertical-align: top;
 	}
+
 	.diyi {
 		vertical-align: top;
 		width: 559px;
@@ -95,9 +142,11 @@
 		margin-top: 40px;
 		margin-bottom: 20px;
 	}
+
 	.dier {
 		margin-left: 31px;
 	}
+
 	.tupu {
 		position: absolute;
 		margin: -53px 0px 0px 20px

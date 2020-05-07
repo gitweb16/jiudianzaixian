@@ -20,7 +20,7 @@
 							<div>
 								<div class="mg">
 									<i class="el-icon-picture"></i>
-									<router-link tag="span" to="publi/huiList/" >会员列表</router-link>
+									<router-link tag="span" to="/publi/huiList" >会员列表</router-link>
 								</div>
 							</div>
 							<div>
@@ -38,7 +38,7 @@
 							<div>
 								<div class="mg">
 									<i class="el-icon-picture"></i>
-									<router-link tag="span" to="/chonZhiJiLu">充值记录</router-link>
+									<router-link tag="span" to="/publi/chongzjl">充值记录</router-link>
 								</div>
 							</div>
 						</li>
@@ -47,7 +47,7 @@
 							<div>
 								<div class="mg">
 									<i class="el-icon-picture"></i>
-									<router-link tag="span" to="/publi/youhui">优惠卷管理</router-link>
+									<router-link tag="span" to="">优惠卷管理</router-link>
 								</div>
 							</div>
 						</li>
@@ -56,9 +56,7 @@
 							<div>
 								<div class="mg">
 									<i class="el-icon-picture"></i>
-									<router-link tag="span" to="/publi/shangplist">
-
-										商品列表</router-link>
+									<router-link tag="span" to="/publi/shangplist">商品列表</router-link>
 								</div>
 							</div>
 							<div>
@@ -161,8 +159,7 @@
 				<div>
 					<div class="node">
 						
-						<div class="content">
-							<!-- <p>欢迎使用华景酒店后台管理系统</p> -->
+						<div class="content">						
 							<router-view></router-view>
 						</div>
 					</div>
@@ -176,15 +173,9 @@
 </template>
 <script src=""></script>
 <script>
-	//import Hello from './components/HelloWorld.vue'
-	//import Header from './components/publi/pub.vue'
 	export default ({
 		name: 'publi',
-		data(){
-			return{				
-					title:'首页'							
-			}
-		},
+		
 		methods:{
 			getTitle(value){
 				console.log(value)
@@ -192,7 +183,7 @@
 		}
 	})
 </script>
-<style lang="scss">
+<style >
 	* {
 		font-size: 0.9375rem;
 	}
@@ -215,13 +206,13 @@
 		padding: 69px 31px 0px 0px;
 		background: #FFF;
 		width: 100%;
-		margin-left: -24px;
+		margin-left: -10px;
 	}
 
 	.content {
 		margin: 1rem 0.5rem;
 		background: #fff;
-		height: 704px;
+		height: 1123px;
 		width: 100%;
 	}
 
@@ -263,7 +254,7 @@
 		background: #fff;
 		margin: -0.25rem 0px 0px 0.1875rem;
 		padding: 0.625rem 2rem;
-
+		height: 1207px;
 	}
 
 	.daohang li {

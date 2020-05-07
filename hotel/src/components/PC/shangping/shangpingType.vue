@@ -1,5 +1,13 @@
 <template>
 	<div id="dafen">
+		<div class="xiaodatou">
+			<span>
+				商品列表><router-link tag="span" to="/publi/character">商品分类</router-link>
+			</span>
+			<span>
+				<router-link tag="a" to="">返回</router-link>
+			</span>
+		</div>
 		<div class="woc">
 			<el-button type="primary" @click="addFang()">添加分类</el-button>
 		</div>
@@ -97,6 +105,16 @@
 </script>
 
 <style scoped>
+	.xiaodatou {
+		background: #fff;
+		margin: -4px 0px 0px 0px;
+		padding: 6px;
+		width: 100%
+	}
+	
+	.xiaodatou>span:last-of-type {
+		float: right
+	}
 	.woc {
 		padding: 10px;
 	}

@@ -1,5 +1,13 @@
 <template>
 	<div id="charact">
+		<div class="xiaodatou">
+			<span>
+				用户管理><router-link tag="span" to="/publi/character">角色管理</router-link>
+			</span>
+			<span>
+				<router-link tag="a" to="">返回</router-link>
+			</span>
+		</div>
 		<div id="charactList" >
 			<el-form>
 				<el-form-item>
@@ -13,7 +21,7 @@
 					<template slot-scope="scope">
 						<router-link to="/publi/cha" type="text" size="small" class="el-button el-button--text el-button--small" tag="el-button" @click="handleEdit(scope.$index, tableData)" >编辑</router-link>
 						
-					<el-button @click.native.prevent="deleteRow(scope.$index, tableData)" type="text" size="small">
+					<el-button  type="text" size="small">
 					删除</el-button>
 					</template>
 				</el-table-column>
@@ -23,7 +31,7 @@
 	</div>
 </template>
 
-<script>
+<script >
 	export default {
 		name:'character',
 		data() {
@@ -75,7 +83,17 @@
 		},
 	}
 </script>
-<style>
+<style scoped>
+	.xiaodatou {
+		background: #fff;
+		margin: -4px 0px 0px 0px;
+		padding: 6px;
+		width: 100%
+	}
+	
+	.xiaodatou>span:last-of-type {
+		float: right;
+	}
 	* {
 		padding: 0;
 		margin: 0;

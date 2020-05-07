@@ -1,5 +1,12 @@
 <template>
 	<div>
+		<div class="xiaodatou">
+			<span>订单管理><router-link tag="span" to="/publi/character">商品订单</router-link>
+			</span>
+			<span>
+				<router-link tag="a" to="">返回</router-link>
+			</span>
+		</div>
 		<el-row>
 			<el-button class="lu1" size="small">全部订单(1000)</el-button>
 			<el-button class="lu" size="small">待付款<span id="span">(1000)</span></el-button>
@@ -140,7 +147,7 @@
 					value: '选项3',
 					label: '收货人电话'
 				}, {
-					value: '选项3',
+					value: '选项4',
 					label: '商品货号'
 				}],
 				tableData: [{
@@ -211,13 +218,24 @@
 						}
 					}]
 				},
-				value1: [new Date(2000, 10, 10, 10, 10), new Date(2000, 10, 11, 10, 10)],
-				value2: ''
+				value: [new Date(2000, 10, 10, 10, 10), new Date(2000, 10, 11, 10, 10)],
+				value2: '',
+				input:''
 			};
 		}
 	};
 </script>
-<style>
+<style scoped>
+	.xiaodatou {
+		background: #fff;
+		margin: -4px 0px 0px 0px;
+		padding: 6px;
+		width: 100%
+	}
+	
+	.xiaodatou>span:last-of-type {
+		float: right
+	}
 	.lu1 {
 		background-color: #1abc9c;
 		margin-left: 30px;

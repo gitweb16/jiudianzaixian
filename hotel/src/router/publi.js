@@ -10,14 +10,12 @@ export default {
 		},
 		{
 			path: 'huiList',
-<<<<<<< HEAD
-			component: ()=>import ('../components/PC/huiyuan/huiList.vue')
-		}
-		,
-=======
 			component: () => import('../components/PC/huiyuan/huiList.vue')
 		},
->>>>>>> f64edd13242423fbe55468b0a557326c983d0251
+		{
+			path: 'chongzjl',
+			component: () => import('../components/PC/huiyuan/chonZhiJiLu.vue')
+		},
 		{
 			path: 'userguanli',
 			component: () => import('../views/PC/userGuanLi.vue')
@@ -31,17 +29,6 @@ export default {
 			path: 'cha',
 			component: () => import('../components/PC/admin/characterae.vue')
 
-<<<<<<< HEAD
-		},{
-		path: 'kefangdingdan',
-		component: () => import('../components/PC/dindan/keFangDingDan.vue')
-		},{
-		path: 'shangpingdingdan',
-		component: () => import('../components/PC/dindan/shangPingDingDan.vue')
-		},{
-		path: 'zhusujilu',
-		component: () => import('../components/PC/dindan/zhuShuJiLu.vue')
-=======
 		}, {
 			path: 'kefangdingdan',
 			component: () => import('../components/PC/dindan/keFangDingDan.vue')
@@ -52,9 +39,9 @@ export default {
 			path: 'zhusujilu',
 			component: () => import('../components/PC/dindan/zhuShuJiLu.vue')
 		},
-		{
-			path: 'youhui',
-			component: () => import('../views/PC/youHuiJuan.vue')
+		{ 
+			path: 'welcome',
+			component: () => import('../components/PC/welcome/welcome.vue')
 		},
 		{
 			path: 'shangplist',
@@ -63,8 +50,7 @@ export default {
 		{
 			path: 'shangpType',
 			component: () => import('../components/PC/shangping/shangpingType.vue')
-		},
-		
+		},		
 		{
 			path: 'shangpingbianji',
 			component: () => import('../components/PC/shangping/shangpingbianji.vue')
@@ -72,7 +58,6 @@ export default {
 		{
 			path: '/*',
 			redirect: '/publi/welcome'
->>>>>>> f64edd13242423fbe55468b0a557326c983d0251
 		}
 	]
 }
