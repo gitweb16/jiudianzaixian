@@ -56,15 +56,14 @@
 							<div>
 								<div class="mg">
 									<i class="el-icon-picture"></i>
-									<router-link tag="span" to="">
-
-										商品列表</router-link>
+										<router-link tag="span" to="/publi/shangplist">商品列表</router-link>
 								</div>
 							</div>
 							<div>
 								<div class="mg">
-									<i class="el-icon-picture"></i>
-									<router-link tag="span" to="">商品分类</router-link>
+									<i class="el-icon-picture"></i>									
+									<router-link tag="span" to="/publi/shangpType">商品分类</router-link>
+
 								</div>
 							</div>
 						</li>
@@ -94,7 +93,7 @@
 							<div>
 								<div class="mg">
 									<i class="el-icon-picture"></i>
-									<router-link tag="span" to="/publi/fangtai">房态管理</router-link>
+									<router-link tag="span" to="">房态管理</router-link>
 								</div>
 							</div>
 							<div>
@@ -162,14 +161,14 @@
 					<div class="node">
 						<div class="xiaodatou">
 							<span>
-								<router-link tag="a" to="">首页</router-link>
-							</span>
+								<router-link tag="a" to="/publi/welcome">首页</router-link>
+								</span>							
 							<span>
 								<router-link tag="a" to="">返回</router-link>
 							</span>
 						</div>
 						<div class="content">
-							<!-- <p>欢迎使用华景酒店后台管理系统</p> -->
+							
 							<router-view></router-view>
 						</div>
 					</div>
